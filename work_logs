@@ -1,0 +1,981 @@
+raining@training-VirtualBox:~$ su - Tom
+Password: 
+$ bash
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Tom@training-VirtualBox:~$ sudo root
+[sudo] password for Tom: 
+Tom@training-VirtualBox:~$ ^C
+Tom@training-VirtualBox:~$ sudo install updates
+[sudo] password for Tom: 
+install: missing destination file operand after 'updates'
+Try 'install --help' for more information.
+Tom@training-VirtualBox:~$ sudo install update
+install: missing destination file operand after 'update'
+Try 'install --help' for more information.
+Tom@training-VirtualBox:~$ sudo install update
+install: missing destination file operand after 'update'
+Try 'install --help' for more information.
+Tom@training-VirtualBox:~$ sudo apt update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,175 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [527 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [283 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [631 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [853 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [351 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [10.3 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [27.6 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [61.1 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 48x48 Icons [29.8 kB]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Fetched 4,280 kB in 3s (1,416 kB/s)                                          
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Tom@training-VirtualBox:~$ sudo apt install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm11
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 2 not upgraded.
+Need to get 5,468 kB of archives.
+After this operation, 38.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.1 [884 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.1 [4,557 kB]
+Fetched 5,468 kB in 1s (6,318 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 183440 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.25.1-1ubuntu3.1_all.deb ...
+Unpacking git-man (1:2.25.1-1ubuntu3.1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.25.1-1ubuntu3.1_amd64.deb ...
+Unpacking git (1:2.25.1-1ubuntu3.1) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git-man (1:2.25.1-1ubuntu3.1) ...
+Setting up git (1:2.25.1-1ubuntu3.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Tom@training-VirtualBox:~$ ip -a
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr | nexthop }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
+                    -f[amily] { inet | inet6 | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -M | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+                    -c[olor]}
+Tom@training-VirtualBox:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:03:49:ab brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.248/24 brd 192.168.1.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 258862sec preferred_lft 258862sec
+    inet6 2600:6c40:5400:1027:0:f8c4:4779:3b7e/128 scope global dynamic noprefixroute 
+       valid_lft 368931sec preferred_lft 368931sec
+    inet6 2600:6c40:5400:1027:4ec0:2a24:92d9:b5e3/64 scope global temporary dynamic 
+       valid_lft 369233sec preferred_lft 85882sec
+    inet6 2600:6c40:5400:1027:27c:581c:a15f:4c0d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 369233sec preferred_lft 369233sec
+    inet6 fe80::f8a2:34b5:afc4:af55/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+Tom@training-VirtualBox:~$ ping 192.168.1.246
+PING 192.168.1.246 (192.168.1.246) 56(84) bytes of data.
+64 bytes from 192.168.1.246: icmp_seq=1 ttl=64 time=0.670 ms
+64 bytes from 192.168.1.246: icmp_seq=2 ttl=64 time=1.24 ms
+64 bytes from 192.168.1.246: icmp_seq=3 ttl=64 time=1.27 ms
+64 bytes from 192.168.1.246: icmp_seq=4 ttl=64 time=1.51 ms
+^C
+--- 192.168.1.246 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3019ms
+rtt min/avg/max/mdev = 0.670/1.174/1.514/0.309 ms
+Tom@training-VirtualBox:~$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	training-VirtualBox
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+Tom@training-VirtualBox:~$ ssh 192.168.1.246
+ssh: connect to host 192.168.1.246 port 22: Connection refused
+Tom@training-VirtualBox:~$ git --version
+git version 2.25.1
+Tom@training-VirtualBox:~$ ssh 192.168.1.246 31251
+ssh: connect to host 192.168.1.246 port 22: Connection refused
+Tom@training-VirtualBox:~$ git --version
+git version 2.25.1
+Tom@training-VirtualBox:~$ ssh 192.168.1.246
+ssh: connect to host 192.168.1.246 port 22: Connection refused
+Tom@training-VirtualBox:~$ service ssh status
+Unit ssh.service could not be found.
+Tom@training-VirtualBox:~$ apt install openssh-server 
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+Tom@training-VirtualBox:~$ su root
+Password: 
+root@training-VirtualBox:/home/Tom# apt install openssh-server
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm11
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  ncurses-term openssh-sftp-server ssh-import-id
+Suggested packages:
+  molly-guard monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+0 upgraded, 4 newly installed, 0 to remove and 2 not upgraded.
+Need to get 688 kB of archives.
+After this operation, 6,010 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ncurses-term all 6.2-0ubuntu2 [249 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.3 [51.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.3 [377 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]
+Fetched 688 kB in 1s (1,200 kB/s)   
+Preconfiguring packages ...
+Selecting previously unselected package ncurses-term.
+(Reading database ... 184375 files and directories currently installed.)
+Preparing to unpack .../ncurses-term_6.2-0ubuntu2_all.deb ...
+Unpacking ncurses-term (6.2-0ubuntu2) ...
+Selecting previously unselected package openssh-sftp-server.
+Preparing to unpack .../openssh-sftp-server_1%3a8.2p1-4ubuntu0.3_amd64.deb ...
+Unpacking openssh-sftp-server (1:8.2p1-4ubuntu0.3) ...
+Selecting previously unselected package openssh-server.
+Preparing to unpack .../openssh-server_1%3a8.2p1-4ubuntu0.3_amd64.deb ...
+Unpacking openssh-server (1:8.2p1-4ubuntu0.3) ...
+Selecting previously unselected package ssh-import-id.
+Preparing to unpack .../ssh-import-id_5.10-0ubuntu1_all.deb ...
+Unpacking ssh-import-id (5.10-0ubuntu1) ...
+Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.3) ...
+Setting up openssh-server (1:8.2p1-4ubuntu0.3) ...
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:dl9bDXgLplIhw7+41r8PvJlslEvtrkTCOsgg/DK92Rc root@training-VirtualBox (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:93wUatyv/DwMm0TNcIYoQ3PdXbCHpOlG4p/goqrrlDI root@training-VirtualBox (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:ye6s+zsOIJtOw+pnl4/8Q8MwbApf042HLu4MP4IC4aY root@training-VirtualBox (ED25519)
+Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
+rescue-ssh.target is a disabled or a static unit, not starting it.
+Setting up ssh-import-id (5.10-0ubuntu1) ...
+Attempting to convert /etc/ssh/ssh_import_id
+Setting up ncurses-term (6.2-0ubuntu2) ...
+Processing triggers for systemd (245.4-4ubuntu3.11) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ufw (0.36-6) ...
+root@training-VirtualBox:/home/Tom# ssh 196.168.1.146
+^C
+root@training-VirtualBox:/home/Tom# ssh 192.168.1.146
+ssh: connect to host 192.168.1.146 port 22: No route to host
+root@training-VirtualBox:/home/Tom# ssh 192.168.1.246
+The authenticity of host '192.168.1.246 (192.168.1.246)' can't be established.
+ECDSA key fingerprint is SHA256:ZxnRftR3lXYci3jYf7tU1NwH8t1mCmkADWquLu7+iEw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.1.246' (ECDSA) to the list of known hosts.
+root@192.168.1.246's password: 
+Permission denied, please try again.
+root@192.168.1.246's password: 
+Permission denied, please try again.
+root@192.168.1.246's password: 
+
+root@training-VirtualBox:/home/Tom# exit
+exit
+Tom@training-VirtualBox:~$ ssh Tom@192.168.1.246
+The authenticity of host '192.168.1.246 (192.168.1.246)' can't be established.
+ECDSA key fingerprint is SHA256:ZxnRftR3lXYci3jYf7tU1NwH8t1mCmkADWquLu7+iEw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added '192.168.1.246' (ECDSA) to the list of known hosts.
+Tom@192.168.1.246's password: 
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 updates can be applied immediately.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.246  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 2600:6c40:5400:1027:0:b26:5da8:7b66  prefixlen 128  scopeid 0x0<global>
+        inet6 fe80::e25d:fdc2:fe27:7616  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:6c40:5400:1027:c795:f89c:cfb:e703  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:6c40:5400:1027:929a:d9d3:242e:e928  prefixlen 64  scopeid 0x0<global>
+        ether 08:00:27:28:02:c5  txqueuelen 1000  (Ethernet)
+        RX packets 142716  bytes 200467884 (200.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 15337  bytes 1434140 (1.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1456  bytes 140400 (140.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1456  bytes 140400 (140.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+$ bash
+Tom@ubuntu-VirtualBox:~$ sudo apt update
+[sudo] password for Tom: 
+Tom is not in the sudoers file.  This incident will be reported.
+Tom@ubuntu-VirtualBox:~$ sudo apt update
+[sudo] password for Tom: 
+Tom is not in the sudoers file.  This incident will be reported.
+Tom@ubuntu-VirtualBox:~$ client_loop: send disconnect: Broken pipe
+Tom@training-VirtualBox:~$ cd /home/
+Tom@training-VirtualBox:/home$ ssh Tom@192.168.1.246
+Tom@192.168.1.246's password: 
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 updates can be applied immediately.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Mon Sep  6 21:25:56 2021 from 192.168.1.248
+$ bash
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Tom@ubuntu-VirtualBox:~$ apt install git
+git                      git-crypt                gitg                     gitlint                  git-restore-mtime
+git2cl                   git-cvs                  git-gui                  gitmagic                 git-review
+git-all                  git-daemon-run           github-backup            git-man                  git-revise
+git-annex                git-daemon-sysvinit      gitinspector             git-mediawiki            git-secret
+git-annex-remote-rclone  git-debpush              gitit                    git-merge-changelog      git-secrets
+gitano                   git-debrebase            gitk                     gitolite3                git-sizer
+gitbatch                 git-doc                  gitlab-cli               git-phab                 gitso
+gitbrute                 git-dpm                  gitlabracadabra          gitpkg                   gitsome
+git-buildpackage         git-el                   gitlab-runner            git-publish              git-svn
+git-buildpackage-rpm     git-email                gitlab-shell             git-quick-stats          gitweb
+git-build-recipe         git-extras               gitlab-workhorse         git-reintegrate          
+git-cola                 git-flow                 gitless                  git-remote-gcrypt        
+git-crecord              git-ftp                  git-lfs                  git-repair               
+Tom@ubuntu-VirtualBox:~$ apt update
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+Tom@ubuntu-VirtualBox:~$ su root
+Password: 
+root@ubuntu-VirtualBox:/home/Tom# exit
+exit
+Tom@ubuntu-VirtualBox:~$ sudo apt update
+[sudo] password for Tom: 
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]               
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [527 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,175 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [283 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [853 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [631 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [351 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [10.3 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [27.6 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [61.0 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Fetched 4,250 kB in 3s (1,646 kB/s)                                        
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Tom@ubuntu-VirtualBox:~$ sudo apt install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm11
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 2 not upgraded.
+Need to get 5,468 kB of archives.
+After this operation, 38.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.1 [884 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.1 [4,557 kB]
+Fetched 5,468 kB in 1s (5,425 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 186287 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.25.1-1ubuntu3.1_all.deb ...
+Unpacking git-man (1:2.25.1-1ubuntu3.1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.25.1-1ubuntu3.1_amd64.deb ...
+Unpacking git (1:2.25.1-1ubuntu3.1) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git-man (1:2.25.1-1ubuntu3.1) ...
+Setting up git (1:2.25.1-1ubuntu3.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Tom@ubuntu-VirtualBox:~$ crontab -e
+no crontab for Tom - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.tiny
+  3. /bin/ed
+
+Choose 1-3 [1]: 1
+crontab: installing new crontab
+Tom@ubuntu-VirtualBox:~$ crontab -l
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+0 0 * * * find /tmp -type f -empty -delete >/dev/null
+Tom@ubuntu-VirtualBox:~$ touch /tmp/sam /tmp/test
+Tom@ubuntu-VirtualBox:~$ ll /tmp/
+total 84
+drwxrwxrwt 19 root   root   4096 Sep  6 21:47 ./
+drwxr-xr-x 20 root   root   4096 Aug 29 19:40 ../
+-rw-------  1 ubuntu ubuntu    0 Sep  6 21:30 config-err-VwG7im
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .font-unix/
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .ICE-unix/
+-rw-rw-r--  1 Tom    Tom       0 Sep  6 21:47 sam
+drwx------  2 ubuntu ubuntu 4096 Sep  6 21:30 ssh-VIhCfpT7XLIS/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-colord.service-9tRXbi/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-ModemManager.service-OiX6zg/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-switcheroo-control.service-dLMwnf/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-logind.service-Bypy2g/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-resolved.service-abHbli/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-timesyncd.service-reOizg/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-upower.service-wMkSji/
+-rw-rw-r--  1 Tom    Tom       0 Sep  6 21:47 test
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .Test-unix/
+drwx------  2 ubuntu ubuntu 4096 Sep  6 21:30 tracker-extract-files.1000/
+drwx------  2 Tom    Tom    4096 Sep  6 21:32 tracker-extract-files.1003/
+drwx------  2 gdm    gdm    4096 Sep  6 21:30 tracker-extract-files.125/
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 VMwareDnD/
+-r--r--r--  1 gdm    gdm      11 Sep  6 21:30 .X1024-lock
+-r--r--r--  1 gdm    gdm      11 Sep  6 21:30 .X1025-lock
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .X11-unix/
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .XIM-unix/
+Tom@ubuntu-VirtualBox:~$ find /tmp -type f -empty -delete 
+find: ‘/tmp/tracker-extract-files.125’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-upower.service-wMkSji’: Permission denied
+find: ‘/tmp/tracker-extract-files.1000’: Permission denied
+find: ‘/tmp/ssh-VIhCfpT7XLIS’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-colord.service-9tRXbi’: Permission denied
+find: cannot delete ‘/tmp/config-err-VwG7im’: Operation not permitted
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-resolved.service-abHbli’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-switcheroo-control.service-dLMwnf’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-ModemManager.service-OiX6zg’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-timesyncd.service-reOizg’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-logind.service-Bypy2g’: Permission denied
+Tom@ubuntu-VirtualBox:~$ find /tmp -type f -empty -delete 
+find: ‘/tmp/tracker-extract-files.125’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-upower.service-wMkSji’: Permission denied
+find: ‘/tmp/tracker-extract-files.1000’: Permission denied
+find: ‘/tmp/ssh-VIhCfpT7XLIS’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-colord.service-9tRXbi’: Permission denied
+find: cannot delete ‘/tmp/config-err-VwG7im’: Operation not permitted
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-resolved.service-abHbli’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-switcheroo-control.service-dLMwnf’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-ModemManager.service-OiX6zg’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-timesyncd.service-reOizg’: Permission denied
+find: ‘/tmp/systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-logind.service-Bypy2g’: Permission denied
+Tom@ubuntu-VirtualBox:~$ ll /tmp/
+total 84
+drwxrwxrwt 19 root   root   4096 Sep  6 21:47 ./
+drwxr-xr-x 20 root   root   4096 Aug 29 19:40 ../
+-rw-------  1 ubuntu ubuntu    0 Sep  6 21:30 config-err-VwG7im
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .font-unix/
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .ICE-unix/
+drwx------  2 ubuntu ubuntu 4096 Sep  6 21:30 ssh-VIhCfpT7XLIS/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-colord.service-9tRXbi/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-ModemManager.service-OiX6zg/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-switcheroo-control.service-dLMwnf/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-logind.service-Bypy2g/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-resolved.service-abHbli/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-systemd-timesyncd.service-reOizg/
+drwx------  3 root   root   4096 Sep  6 21:30 systemd-private-350bdabb0a494b83bf95bb0627c6dc59-upower.service-wMkSji/
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .Test-unix/
+drwx------  2 ubuntu ubuntu 4096 Sep  6 21:30 tracker-extract-files.1000/
+drwx------  2 Tom    Tom    4096 Sep  6 21:32 tracker-extract-files.1003/
+drwx------  2 gdm    gdm    4096 Sep  6 21:30 tracker-extract-files.125/
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 VMwareDnD/
+-r--r--r--  1 gdm    gdm      11 Sep  6 21:30 .X1024-lock
+-r--r--r--  1 gdm    gdm      11 Sep  6 21:30 .X1025-lock
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .X11-unix/
+drwxrwxrwt  2 root   root   4096 Sep  6 21:30 .XIM-unix/
+Tom@ubuntu-VirtualBox:~$ crontab -e
+crontab: installing new crontab
+Tom@ubuntu-VirtualBox:~$ crontab -l
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+0 0 * * * find /tmp -type f -empty -delete >/dev/null
+0 6 * * 2 yes | sudo apt-get upgrade 
+Tom@ubuntu-VirtualBox:~$ ^C
+Tom@ubuntu-VirtualBox:~$ vi server_resources.sh
+Tom@ubuntu-VirtualBox:~$ chmod 777 server_resources.sh 
+Tom@ubuntu-VirtualBox:~$ ./server_resources.sh 
+              total        used        free      shared  buff/cache   available
+Mem:          1.9Gi       661Mi       347Mi        12Mi       976Mi       1.1Gi
+Swap:         1.9Gi          0B       1.9Gi
+Filesystem      Size  Used Avail Use% Mounted on
+udev            964M     0  964M   0% /dev
+tmpfs           199M  1.4M  198M   1% /run
+/dev/sda5        40G  8.8G   29G  24% /
+tmpfs           993M     0  993M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           993M     0  993M   0% /sys/fs/cgroup
+/dev/loop0       56M   56M     0 100% /snap/core18/1988
+/dev/loop1      219M  219M     0 100% /snap/gnome-3-34-1804/66
+/dev/loop2       56M   56M     0 100% /snap/core18/2128
+/dev/loop4       66M   66M     0 100% /snap/gtk-common-themes/1515
+/dev/loop3      219M  219M     0 100% /snap/gnome-3-34-1804/72
+/dev/loop6       52M   52M     0 100% /snap/snap-store/518
+/dev/loop5       65M   65M     0 100% /snap/gtk-common-themes/1514
+/dev/loop7       51M   51M     0 100% /snap/snap-store/547
+/dev/loop8       33M   33M     0 100% /snap/snapd/12883
+/dev/loop9       32M   32M     0 100% /snap/snapd/11036
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           199M   20K  199M   1% /run/user/1000
+tmpfs           199M  8.0K  199M   1% /run/user/1003
+
+top - 22:11:58 up 42 min,  2 users,  load average: 0.03, 0.03, 0.00
+Tom@ubuntu-VirtualBox:~$ ^C    0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_0                                                           
+Tom@ubuntu-VirtualBox:~$ ^C
+Tom@ubuntu-VirtualBox:~$ 
+Tom@ubuntu-VirtualBox:~$ 
+Tom@ubuntu-VirtualBox:~$ ' for help 
+Tom@ubuntu-VirtualBox:~$ ./server_resources.sh ^C
+Tom@ubuntu-VirtualBox:~$ vmstat 2 
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 365932  46776 953696    0    0   161    67  224   93  2  1 96  0  0
+ 0  0      0 365932  46776 953736    0    0     0     0  397   41  0  0 100  0  0
+ 0  0      0 365932  46776 953736    0    0     0     0  376   41  0  0 100  0  0
+ 0  0      0 365932  46776 953736    0    0     0     0  371   44  0  0 100  0  0
+ 0  0      0 365932  46784 953736    0    0     0     6  393   46  0  0 100  0  0
+^C
+Tom@ubuntu-VirtualBox:~$ vmstat 2 2
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 366192  46784 953736    0    0   160    66  224   93  2  1 96  0  0
+ 0  0      0 366184  46784 953736    0    0     0     0  387   41  0  0 100  0  0
+Tom@ubuntu-VirtualBox:~$ iostat 2 2 
+
+Command 'iostat' not found, but can be installed with:
+
+sudo apt install sysstat
+
+Tom@ubuntu-VirtualBox:~$ sudo apt install sysstat
+[sudo] password for Tom: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm11
+Use 'sudo apt autoremove' to remove it.
+Suggested packages:
+  isag
+The following NEW packages will be installed:
+  sysstat
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 448 kB of archives.
+After this operation, 1,511 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 sysstat amd64 12.2.0-2ubuntu0.1 [448 kB]
+Fetched 448 kB in 0s (959 kB/s) 
+Preconfiguring packages ...
+Selecting previously unselected package sysstat.
+(Reading database ... 187222 files and directories currently installed.)
+Preparing to unpack .../sysstat_12.2.0-2ubuntu0.1_amd64.deb ...
+Unpacking sysstat (12.2.0-2ubuntu0.1) ...
+Setting up sysstat (12.2.0-2ubuntu0.1) ...
+
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in auto mode
+Created symlink /etc/systemd/system/multi-user.target.wants/sysstat.service → /lib/systemd/system/sysstat.service.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.11) ...
+Tom@ubuntu-VirtualBox:~$ iostat 2 2 
+Linux 5.11.0-27-generic (ubuntu-VirtualBox) 	09/06/2021 	_x86_64_	(2 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           2.24    0.32    0.98    0.18    0.00   96.27
+
+Device             tps    kB_read/s    kB_wrtn/s    kB_dscd/s    kB_read    kB_wrtn    kB_dscd
+loop0             0.02         0.13         0.00         0.00        347          0          0
+loop1             0.02         0.39         0.00         0.00       1082          0          0
+loop10            0.00         0.01         0.00         0.00         18          0          0
+loop2             0.02         0.13         0.00         0.00        359          0          0
+loop3             0.02         0.39         0.00         0.00       1069          0          0
+loop4             0.02         0.39         0.00         0.00       1081          0          0
+loop5             0.02         0.39         0.00         0.00       1065          0          0
+loop6             0.02         0.13         0.00         0.00        350          0          0
+loop7             0.02         0.13         0.00         0.00        359          0          0
+loop8             0.34        10.92         0.00         0.00      30147          0          0
+loop9             0.02         0.13         0.00         0.00        347          0          0
+sda               9.36       284.72       144.89         0.00     785980     399977          0
+scd0              0.00         0.00         0.00         0.00          2          0          0
+scd1              0.00         0.00         0.00         0.00          2          0          0
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.26    0.00    0.00   99.74
+
+Device             tps    kB_read/s    kB_wrtn/s    kB_dscd/s    kB_read    kB_wrtn    kB_dscd
+loop0             0.00         0.00         0.00         0.00          0          0          0
+loop1             0.00         0.00         0.00         0.00          0          0          0
+loop10            0.00         0.00         0.00         0.00          0          0          0
+loop2             0.00         0.00         0.00         0.00          0          0          0
+loop3             0.00         0.00         0.00         0.00          0          0          0
+loop4             0.00         0.00         0.00         0.00          0          0          0
+loop5             0.00         0.00         0.00         0.00          0          0          0
+loop6             0.00         0.00         0.00         0.00          0          0          0
+loop7             0.00         0.00         0.00         0.00          0          0          0
+loop8             0.00         0.00         0.00         0.00          0          0          0
+loop9             0.00         0.00         0.00         0.00          0          0          0
+sda               0.00         0.00         0.00         0.00          0          0          0
+scd0              0.00         0.00         0.00         0.00          0          0          0
+scd1              0.00         0.00         0.00         0.00          0          0          0
+
+
+Tom@ubuntu-VirtualBox:~$ nload
+
+Command 'nload' not found, but can be installed with:
+
+sudo apt install nload
+
+Tom@ubuntu-VirtualBox:~$ sudo apt install nload
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm11
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  nload
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 55.1 kB of archives.
+After this operation, 173 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 nload amd64 0.7.4-2build3 [55.1 kB]
+Fetched 55.1 kB in 0s (222 kB/s)
+Selecting previously unselected package nload.
+(Reading database ... 187279 files and directories currently installed.)
+Preparing to unpack .../nload_0.7.4-2build3_amd64.deb ...
+Unpacking nload (0.7.4-2build3) ...
+Setting up nload (0.7.4-2build3) ...
+Processing triggers for man-db (2.9.1-1) ...
+Tom@ubuntu-VirtualBox:~$ nload
+Tom@ubuntu-VirtualBox:~$ ./server_resources.sh 
+              total        used        free      shared  buff/cache   available
+Mem:          1.9Gi       657Mi       341Mi        12Mi       986Mi       1.1Gi
+Swap:         1.9Gi          0B       1.9Gi
+Filesystem      Size  Used Avail Use% Mounted on
+udev            964M     0  964M   0% /dev
+tmpfs           199M  1.4M  198M   1% /run
+/dev/sda5        40G  8.8G   29G  24% /
+tmpfs           993M     0  993M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           993M     0  993M   0% /sys/fs/cgroup
+/dev/loop0       56M   56M     0 100% /snap/core18/1988
+/dev/loop1      219M  219M     0 100% /snap/gnome-3-34-1804/66
+/dev/loop2       56M   56M     0 100% /snap/core18/2128
+/dev/loop4       66M   66M     0 100% /snap/gtk-common-themes/1515
+/dev/loop3      219M  219M     0 100% /snap/gnome-3-34-1804/72
+/dev/loop6       52M   52M     0 100% /snap/snap-store/518
+/dev/loop5       65M   65M     0 100% /snap/gtk-common-themes/1514
+/dev/loop7       51M   51M     0 100% /snap/snap-store/547
+/dev/loop8       33M   33M     0 100% /snap/snapd/12883
+/dev/loop9       32M   32M     0 100% /snap/snapd/11036
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           199M   20K  199M   1% /run/user/1000
+tmpfs           199M  8.0K  199M   1% /run/user/1003
+
+top - 22:18:37 up 48 min,  2 users,  load average: 0.05, 0.11, 0.05
+Tom@ubuntu-VirtualBox:~$ ^C
+Tom@ubuntu-VirtualBox:~$ ^C
+Tom@ubuntu-VirtualBox:~$ vi server_resources.sh
+Tom@ubuntu-VirtualBox:~$ nano server_resources.sh
+Tom@ubuntu-VirtualBox:~$ ./server_resources.sh 
+              total        used        free      shared  buff/cache   available
+Mem:          1.9Gi       678Mi       319Mi        12Mi       987Mi       1.1Gi
+Swap:         1.9Gi          0B       1.9Gi
+Filesystem      Size  Used Avail Use% Mounted on
+udev            964M     0  964M   0% /dev
+tmpfs           199M  1.4M  198M   1% /run
+/dev/sda5        40G  8.8G   29G  24% /
+tmpfs           993M     0  993M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           993M     0  993M   0% /sys/fs/cgroup
+/dev/loop0       56M   56M     0 100% /snap/core18/1988
+/dev/loop1      219M  219M     0 100% /snap/gnome-3-34-1804/66
+/dev/loop2       56M   56M     0 100% /snap/core18/2128
+/dev/loop4       66M   66M     0 100% /snap/gtk-common-themes/1515
+/dev/loop3      219M  219M     0 100% /snap/gnome-3-34-1804/72
+/dev/loop6       52M   52M     0 100% /snap/snap-store/518
+/dev/loop5       65M   65M     0 100% /snap/gtk-common-themes/1514
+/dev/loop7       51M   51M     0 100% /snap/snap-store/547
+/dev/loop8       33M   33M     0 100% /snap/snapd/12883
+/dev/loop9       32M   32M     0 100% /snap/snapd/11036
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           199M   20K  199M   1% /run/user/1000
+tmpfs           199M  8.0K  199M   1% /run/user/1003
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 327496  47964 962832    0    0   134    73  225   90  2  1 96  0  0
+ 0  0      0 327496  47964 962836    0    0     0     0  400   56  0  0 100  0  0
+ 22:22:11 up 52 min,  2 users,  load average: 0.00, 0.05, 0.03
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ubuntu   :0       :0               21:30   ?xdm?   1:21   0.02s /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubunt
+Tom      pts/1    192.168.1.248    21:31    3.00s  0.31s  0.03s w
+Tom@ubuntu-VirtualBox:~$ nload -h
+
+nload version 0.7.4
+Copyright (C) 2001 - 2012 by Roland Riegel <feedback@roland-riegel.de>
+nload comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under certain conditions. For more details see the
+GNU General Public License Version 2 (http://www.gnu.org/copyleft/gpl.html).
+
+Command line syntax:
+nload [options] [devices]
+nload --help|-h
+
+Options:
+-a period       Sets the length in seconds of the time window for average
+                calculation.
+                Default is 300.
+-i max_scaling  Specifies the 100% mark in kBit/s of the graph indicating the
+                incoming bandwidth usage. Ignored if max_scaling is 0 or the
+                switch -m is given.
+                Default is 10240.
+-m              Show multiple devices at a time; no traffic graphs.
+-o max_scaling  Same as -i but for the graph indicating the outgoing bandwidth
+                usage.
+                Default is 10240.
+-t interval     Determines the refresh interval of the display in milliseconds.
+                Default is 500.
+-u h|b|k|m|g    Sets the type of unit used for the display of traffic numbers.
+   H|B|K|M|G    h: auto, b: Bit/s, k: kBit/s, m: MBit/s etc.
+                H: auto, B: Byte/s, K: kByte/s, M: MByte/s etc.
+                Default is h.
+-U h|b|k|m|g    Same as -u, but for a total amount of data (without "/s").
+   H|B|K|M|G    Default is H.
+devices         Network devices to use.
+                Default is to use all auto-detected devices.
+--help
+-h              Print this help.
+
+example: nload -t 200 -i 1024 -o 128 -U M
+
+The options above can also be changed at run time by pressing the 'F2' key.
+
+Tom@ubuntu-VirtualBox:~$ nload -m -U M
+Tom@ubuntu-VirtualBox:~$ nload -m -U M -a 2
+Tom@ubuntu-VirtualBox:~$ quit | nload -m -U M -a 2
+Tom@ubuntu-VirtualBox:~$ exit| nload -m -U M -a 2
+Tom@ubuntu-VirtualBox:~$ ^C| nload -m -U M -a 2
+bash: :s^C| nload -m -U M -a 2: substitution failed
+Tom@ubuntu-VirtualBox:~$ w
+ 22:30:18 up  1:00,  2 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ubuntu   :0       :0               21:30   ?xdm?   1:24   0.02s /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubunt
+Tom      pts/1    192.168.1.248    21:31    0.00s  0.31s  0.01s w
+Tom@ubuntu-VirtualBox:~$ nano server_resources.sh
+Tom@ubuntu-VirtualBox:~$ 
+Tom@ubuntu-VirtualBox:~$ configure git
+configure: command not found
+Tom@ubuntu-VirtualBox:~$ git config -global user.name Tom
+error: did you mean `--global` (with two dashes)?
+Tom@ubuntu-VirtualBox:~$ git config --global user.name Tom
+Tom@ubuntu-VirtualBox:~$ git config --global user.email "samolu2003@gmail.com"
+Tom@ubuntu-VirtualBox:~$ firefox
+Error: no DISPLAY environment variable specified
+Tom@ubuntu-VirtualBox:~$ git remote add origin https://github.com/samolu2003/samrepo.git
+fatal: not a git repository (or any of the parent directories): .git
+Tom@ubuntu-VirtualBox:~$ ssh https://github.com/samolu2003/project.git
+ssh: Could not resolve hostname https://github.com/samolu2003/project.git: Name or service not known
+Tom@ubuntu-VirtualBox:~$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+Tom@ubuntu-VirtualBox:~$ git config --global user.name samolu2003
+Tom@ubuntu-VirtualBox:~$ ssh https://github.com/samolu2003/project.git
+ssh: Could not resolve hostname https://github.com/samolu2003/project.git: Name or service not known
+Tom@ubuntu-VirtualBox:~$ git init
+Initialized empty Git repository in /home/Tom/.git/
+Tom@ubuntu-VirtualBox:~$ git add test.txt
+fatal: pathspec 'test.txt' did not match any files
+Tom@ubuntu-VirtualBox:~$ touch test.txt
+Tom@ubuntu-VirtualBox:~$ git add test.txt
+Tom@ubuntu-VirtualBox:~$ git commit -m "firsdt commit"
+[master (root-commit) 953852e] firsdt commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+Tom@ubuntu-VirtualBox:~$ git branch -M main
+Tom@ubuntu-VirtualBox:~$ git remote add origin https://github.com/samolu2003/myproject.git
+Tom@ubuntu-VirtualBox:~$ git push -u origin main
+Username for 'https://github.com': samolu2003
+Password for 'https://samolu2003@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/samolu2003/myproject.git/'
+Tom@ubuntu-VirtualBox:~$ git push -u origin main
+Username for 'https://github.com': samolu2003
+Password for 'https://samolu2003@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/samolu2003/myproject.git/'
+Tom@ubuntu-VirtualBox:~$ cat token
+cat: token: No such file or directory
+Tom@ubuntu-VirtualBox:~$ cat /tmp/token 
+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
+Tom@ubuntu-VirtualBox:~$ 
+Tom@ubuntu-VirtualBox:~$ git push -u origin main
+Username for 'https://github.com': samolu2003
+Password for 'https://samolu2003@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 206 bytes | 103.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/samolu2003/myproject.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Tom@ubuntu-VirtualBox:~$ echo "this is line1" > test.txt
+Tom@ubuntu-VirtualBox:~$ git add test.txt
+Tom@ubuntu-VirtualBox:~$ git commit -m "firsdt commit"
+[main e27e7be] firsdt commit
+ 1 file changed, 1 insertion(+)
+Tom@ubuntu-VirtualBox:~$ git branch -M main
+Tom@ubuntu-VirtualBox:~$ git remote add origin https://github.com/samolu2003/myproject.git
+fatal: remote origin already exists.
+Tom@ubuntu-VirtualBox:~$ git push -u origin main
+Username for 'https://github.com': samolu2003
+Password for 'https://samolu2003@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 246 bytes | 246.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/samolu2003/myproject.git
+   953852e..e27e7be  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Tom@ubuntu-VirtualBox:~$ ssh https://github.com/samolu2003/project.git
+ssh: Could not resolve hostname https://github.com/samolu2003/project.git: Name or service not known
+Tom@ubuntu-VirtualBox:~$ https https://github.com/samolu2003/project.git
+
+Command 'https' not found, did you mean:
+
+  command 'http' from snap http (2.4.0)
+  command 'http' from deb httpie (1.0.3-2)
+
+See 'snap info <snapname>' for additional versions.
+
+Tom@ubuntu-VirtualBox:~$ git add server_resources.sh 
+Tom@ubuntu-VirtualBox:~$ git commit -M "adding monitor script to repo"
+error: unknown switch `M'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+Tom@ubuntu-VirtualBox:~$ git commit -m "adding monitor script to repo"
+[main bfb8349] adding monitor script to repo
+ 1 file changed, 5 insertions(+)
+ create mode 100755 server_resources.sh
+Tom@ubuntu-VirtualBox:~$ git push origin main
+Username for 'https://github.com': samolu2003
+Password for 'https://samolu2003@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/samolu2003/myproject.git
+   e27e7be..bfb8349  main -> main
+Tom@ubuntu-VirtualBox:~$ ll /usr/bin/firefox 
+lrwxrwxrwx 1 root root 25 Aug 23 11:55 /usr/bin/firefox -> ../lib/firefox/firefox.sh*
+Tom@ubuntu-VirtualBox:~$ sudo vi /etc/hosts
+[sudo] password for Tom: 
+Tom@ubuntu-VirtualBox:~$ 
+
